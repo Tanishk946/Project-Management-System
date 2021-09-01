@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <style>
+    
+        body
+        {
+            margin:0px;
+            background-color: #1e242a;
+        }
+    
+        #main
+        {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+        }
+        
+        #box1
+        {
+            height: 625px;
+            width:530px;
+            position: absolute;
+            left:60%;
+            top: -5%;
+        }
+        
+        #box2{
+            height: auto;
+            width:auto;
+            font-family: 'Bahnschrift Condensed';
+            color:white;
+            font-size:10em;
+            font-weight: 500;
+            line-height: 130px;
+            position: absolute;
+            top:100px;
+            left:100px;
+            overflow: hidden;
+        }
+
+        #text{
+            position: relative;
+        }
+
+    </style>
+    
+    <div id="main">
+        <div id="box1">
+            <img src="https://res.cloudinary.com/davims6ce/image/upload/v1597557706/2_meanqt.png">
+        </div>
+        
+        <div id="box2">
+            <div id="text">
+                Project
+                <br>
+                Management
+                <br>
+                System
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

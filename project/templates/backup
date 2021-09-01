@@ -1,0 +1,19 @@
+<!-- <div class="text-center">
+        <div class="container">
+            <form method="POST" class="form-register" style="color:white">
+                {{ season_query_form.hidden_tag() }}
+                <br>
+                <table class="table table-hover table-dark">
+                    <tbody>
+                        <tr>
+                            <h2>Select Season</h2>
+                            <td>{{ season_query_form.seasons(class="form-control", placeholder="User Name") }}</td>
+                            <td>{{ season_query_form.submit(class="btn btn-block btn-outline-success") }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+
+'jpg','png','jpeg','doc','docx','odt','ppt','pptx','pdf','txt','text','xls','xlsx'

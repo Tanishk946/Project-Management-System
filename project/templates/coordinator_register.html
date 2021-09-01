@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Co Ordinator Register Page
+{% endblock %}
+
+{% block content %}
+    <body class="text-center">
+        <div class="container">
+            <form method="POST" class="form-register" style="color:white">
+                {{ coordinator_register_form.hidden_tag() }}
+                <br>
+                <table class="table table-sm table-dark">
+                    <tr>
+                        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/project-manager-1-519843.png" width="100px" height="100px" alt="Guide Image" style="background-color: white;">
+                        <br>
+                        <h1 class="h3 mb-3 font-weight-normal"><u><b>Please Create your Account</b></u></h1>
+                    </tr>
+                </table>
+                
+                <table class="table table-hover table-dark">
+                    <tbody>
+                        <tr>
+                            <td>{{ coordinator_register_form.name.label() }}</td>
+                            <td>{{ coordinator_register_form.name(class="form-control", placeholder="User Name") }}</td>
+
+                            <td>{{ coordinator_register_form.email.label() }}</td>
+                            <td>{{ coordinator_register_form.email(class="form-control", placeholder="Email Address") }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>{{ coordinator_register_form.dept.label() }}</td>
+                            <td>{{ coordinator_register_form.dept(class="form-control", placeholder="Department") }}</td>
+
+                            <td>{{ coordinator_register_form.mobile.label() }}</td>
+                            <td>{{ coordinator_register_form.mobile(class="form-control", placeholder="Mobile") }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>{{ coordinator_register_form.password1.label() }}</td>
+                            <td>{{ coordinator_register_form.password1(class="form-control", placeholder="Password") }}</td>
+
+                            <td>{{ coordinator_register_form.password2.label() }}</td>
+                            <td>{{ coordinator_register_form.password2(class="form-control", placeholder="Confirm Password") }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {{ coordinator_register_form.submit(class="btn btn-lg btn-block btn-primary") }}
+            </form>
+        </div>
+        <br>
+        <div class="checkbox mb-3">
+               <h5>Already Have an Account ?</h5>
+               <a class="btn btn-lg btn-secondary" href="{{ url_for('login_page') }}">Login</a>
+            </div>
+    </body>
+{% endblock %}

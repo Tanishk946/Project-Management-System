@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            {{ login_form.hidden_tag() }}
+            <br>
+            <table class="table table-sm table-dark">
+                <tr>
+                    <img src="https://www.mcicon.com/wp-content/uploads/2020/12/Education_Student_1-copy.jpg" width="100px" height="100px" alt="Student Image">
+                    <br>
+                    <h1 class="h3 mb-3 font-weight-normal"><u><b>Please Login Here</b></u></h1>
+                </tr>
+            </table>
+            
+            <table class="table table-hover table-dark">
+                <tbody>
+                    <tr>
+                        <td>{{ login_form.email.label() }}</td>
+                        <td>{{ login_form.email(class="form-control", placeholder="Email") }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{ login_form.password.label() }}</td>
+                        <td>{{ login_form.password(class="form-control", placeholder="Password") }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{ login_form.user_type.label() }}</td>
+                        <td>{{ login_form.user_type(class="form-control", placeholder="Login As") }}</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            {{ login_form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+        <span id="PasswordHelpBlock" class="help-block"><a href="{{ url_for('forgot_password_request') }}">Forgot your password?</a></span>
+    </div>
+    <div class="checkbox mb-3">
+           <h5>Dont Have an Account ?</h5>
+           <a class="btn btn-lg btn-secondary" href="{{ url_for('register_page') }}">Register</a>
+        </div>
+</body>
+{% endblock %}
+
+

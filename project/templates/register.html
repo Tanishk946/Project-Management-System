@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Register Page
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <img src="https://anits.edu.in/images/banner2.jpg" width="675px" height="200px" style="margin: 0px auto;">
+        <table class="table table-hover table-dark">
+            <tbody>
+              <tr align="center">
+                <td><h1>Admin</h1></td>
+                <td>
+                    <a href="#">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Click Here</button>
+                    </a>
+                </td>
+              </tr>
+              <tr align="center">
+                <td><h1>Student</h1></td>
+                <td>
+                    <a href="{{ url_for('student_register_page') }}" target="_blank">
+                        <button type="button" class="btn btn-danger btn-lg btn-block">Click Here</button>
+                    </a>
+                </td>
+              </tr>
+              <tr align="center">
+                <td><h1>Guide</h1></td>
+                <td>
+                    <a href="{{ url_for('guide_register_page') }}" target="_blank">
+                        <button type="button" class="btn btn-warning btn-lg btn-block">Click Here</button>
+                    </a>
+                </td>
+              </tr>
+              <tr align="center">
+                <td><h1>Co-Ordinator</h1></td>
+                <td>
+                    <a href="{{ url_for('coordinator_register_page') }}" target="_blank">
+                        <button type="button" class="btn btn-success btn-lg btn-block">Click Here</button>
+                    </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <style>
+        .content
+        {
+            margin: 1% 25%;
+        }
+    </style>
+{% endblock %}
